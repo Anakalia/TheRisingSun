@@ -110,6 +110,7 @@ namespace TheRisingSun
             this.btnF1.TabIndex = 0;
             this.btnF1.Text = "Table 1";
             this.btnF1.UseVisualStyleBackColor = false;
+            this.btnF1.Click += new System.EventHandler(this.btnF1_Click);
             // 
             // gbGarden
             // 
@@ -417,6 +418,7 @@ namespace TheRisingSun
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.gbFront.ResumeLayout(false);
             this.gbGarden.ResumeLayout(false);
             this.gbInside.ResumeLayout(false);

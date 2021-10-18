@@ -17,54 +17,19 @@ namespace TheRisingSun
             InitializeComponent();
         }
 
-        Drinks objDrinks;
-        DataSet dsDrinks;
-        public DataRow drDrinks;
-        public int nCurrentRow;
-
-        private void FrmDisplayDrinks_Load_1(object sender, EventArgs e)
+        internal void Show(int selection)
         {
-            objDrinks = new Drinks();
-            dsDrinks = new DataSet();
-
-            try
-            {
-                dsDrinks = objDrinks.GetDrinks();
-
-                dgDrinks.DataSource = dsDrinks.Tables[0];
-                //dgDrinks.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                //dgDrinks.MultiSelect = false;
-
-                if (dgDrinks.CurrentRow == null)
-                {
-                    MessageBox.Show("Sorry there are no results. \n Would you like to try again?", "No Results", MessageBoxButtons.OKCancel);
-                    return;
-                }
-                else
-                {
-                    int CurrentRowIndex = dgDrinks.CurrentRow.Index;
-                    drDrinks = dsDrinks.Tables[0].Rows[0];
-                    return;
-                }
-            }
-
-            catch
-            {
-                MessageBox.Show("There was a problem, please try again.", "Warning", MessageBoxButtons.OK);
-                return;
-            }
+            throw new NotImplementedException();
         }
 
-        //private void button1_Click(object sender, EventArgs e)
-        //{
+        
 
-        //}
-
-
-
-        /*private void DisplayData()
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            //if needed
-        }*/
+            //Application.DoEvents();
+            //dsDrinks.Clear();
+            FormProvider.FrmDrinks.Show();
+            this.Hide();
+        }
     }
 }

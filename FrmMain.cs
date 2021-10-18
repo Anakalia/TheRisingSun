@@ -22,5 +22,11 @@ namespace TheRisingSun
             FormProvider.FrmDisplayDrinks.Show();
             this.Hide();
         }
+
+        private void btnF1_Click(object sender, EventArgs e) //user clicks front table one
+        {
+            FormProvider.FrmDrinks.Show();
+            this.Hide();
+        }
     }
 }
